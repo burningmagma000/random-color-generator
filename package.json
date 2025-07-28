@@ -21,7 +21,7 @@
       "RobotoFlex*.ttf",
       "package.json"
     ],
-    "asar": true,
+    "asar": false,
     "mac": {
       "target": "dmg",
       "artifactName": "Random Color Generator.dmg",
