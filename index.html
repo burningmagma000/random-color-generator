@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preload" href="RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+        <link href="./style.css" rel="stylesheet" type="text/css"/>
+        <meta charset="utf-8"/>
+        <title>Random Color Generator</title>
+    </head>
+    <body>
+        <div id="window">
+        <h1 id="title" style="font-size: 48px; text-align: center;">Random Color Generator</h1>
+        <h2 id="copyright" style="text-align: center;">© Elijah Wiencek 2025</h2>
+        <h3 id="version" style="text-align: center;">v<span id="versionNumber"></span></h3>
+        <div class="left-side">
+            <p class="hexcode" id="color">FFFFFF<br/>255, 255, 255</p>
+            <button class="button" onclick="Generate()"><span data-label="Copy RGB values">Generate a random color</span></button>
+            <form autocomplete="off" style="display: flex; align-items: center; gap: 6px;">
+            <input id="hashtagCheckbox" onchange="HashtagOnOrOff(this)" style="accent-color: #000000; border: none;" type="checkbox"/>
+            <label for="hashtagCheckbox" id="hashtagCheckboxLabel">Include hashtag</label>
+            </form>
+        </div>
+        <div class="right-side">
+            <button class="button" onclick="CopyHEXCode()"><span data-label="Copy RGB values">Copy HEX code</span></button>
+            <button class="button" onclick="CopyRGBValues()"><span data-label="Copy RGB values">Copy RGB values</span></button>
+            <button class="button" onclick="CopyRValue()"><span data-label="Copy RGB values">Copy R value</span></button>
+            <button class="button" onclick="CopyGValue()"><span data-label="Copy RGB values">Copy G value</span></button>
+            <button class="button" onclick="CopyBValue()"><span data-label="Copy RGB values">Copy B value</span></button>
+        </div>
+            <div id="preloadFonts"></div>
+            <script src="renderer.js"></script>
+        </div>
+    </body>
+</html>
