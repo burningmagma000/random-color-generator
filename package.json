@@ -1,0 +1,64 @@
+{
+  "name": "random-color-generator",
+  "version": "1.0.0",
+  "description": "Random Color Generator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "npx electron-builder --mac --x64",
+    "build:win": "npx electron-builder --win",
+    "build:all": "npx electron-builder --mac --win",
+    "build:dmg": "npx electron-builder --mac --x64 --c.mac.identity=null"
+  },
+  "build": {
+    "appId": "com.elijah-wiencek.random-color-generator",
+    "productName": "Random Color Generator",
+    "files": [
+      "index.html",
+      "main.js",
+      "renderer.js",
+      "style.css",
+      "RobotoFlex*.ttf",
+      "package.json"
+    ],
+    "asar": true,
+    "mac": {
+      "target": "dmg",
+      "artifactName": "Random Color Generator.dmg",
+      "icon": "build/icons/icon.icns"
+    },
+    "dmg": {
+      "title": "Random Color Generator",
+      "icon": "build/icons/icon.icns",
+      "window": {
+        "width": 800,
+        "height": 600
+      },
+      "contents": [
+        {
+          "x": 130,
+          "y": 220,
+          "type": "file"
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": "portable",
+      "artifactName": "Random Color Generator.exe",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "27.3.3",
+    "electron-builder": "26.0.12"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

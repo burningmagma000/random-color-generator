@@ -1,0 +1,171 @@
+@font-face
+{
+  font-family: "Roboto Flex";
+  src: url("RobotoFlex.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+html, body
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Flex", sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+#version,
+#copyright
+{
+  font-family: "Roboto Flex", sans-serif;
+}
+
+h2
+{
+  position: absolute;
+  top: 10.25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3
+{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#version span
+{
+  font-family: "Roboto Flex", sans-serif;
+}
+
+#hashtagCheckboxLabel
+{
+  font-family: "Roboto Flex", sans-serif;
+}
+
+#window
+{
+  width: 800px;
+  height: 600px;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-side,
+.right-side
+{
+  position: absolute;
+  top: 212.5px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-side
+{
+  left: 250px;
+}
+
+.right-side
+{
+  left: 550px;
+}
+
+.button
+{
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Roboto Flex", sans-serif;
+  letter-spacing: 0px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button span
+{
+  font-family: "Roboto Flex", sans-serif;
+  text-shadow: none;
+}
+
+span.hovering
+{
+  text-shadow:
+    0 0 0 currentColor,
+    0.0625px 0 currentColor,
+    -0.0625px 0 currentColor,
+    0 0.0625px currentColor,
+    0 -0.0625px currentColor,
+    0.0625px 0.0625px currentColor,
+    -0.0625px -0.0625px currentColor,
+    0.0625px -0.0625px currentColor,
+    -0.0625px 0.0625px currentColor;
+}
+
+span.holding
+{
+  text-shadow:
+    0 0 0 currentColor,
+    0.4921875px 0 currentColor,
+    -0.4921875px 0 currentColor,
+    0 0.4921875px currentColor,
+    0 -0.4921875px currentColor,
+    0.4921875px 0.4921875px currentColor,
+    -0.4921875px -0.4921875px currentColor,
+    0.4921875px -0.4921875px currentColor,
+    -0.4921875px 0.4921875px currentColor;
+}
+
+.hexcode
+{
+  font-size: 32px;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+#preloadFonts
+{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-style: normal;
+}
+
+#preloadFonts::before
+{
+  content: "A";
+}
+
+.button span::after
+{
+  content: attr(data-label);
+  visibility: hidden;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
